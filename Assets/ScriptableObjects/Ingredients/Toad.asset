@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Toad
   m_EditorClassIdentifier: 
   ingredientName: Toad
-  ingredientSprite: {fileID: 21300000, guid: a5039a03b01eba3499fc645c8b5b7107, type: 3}
+  ingredientSprite: {fileID: 21300000, guid: b656e5fe8bf90d247b2d66fe3a8a4f2a, type: 3}
   ingredientType: 0
