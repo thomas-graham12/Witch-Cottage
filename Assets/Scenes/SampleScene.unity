@@ -267,6 +267,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientOne: 0
   ingredientTwo: 0
+  potionList:
+  - {fileID: 11400000, guid: 11d2b839a48b69c4c8cd21fa5e988035, type: 2}
+  - {fileID: 11400000, guid: dff585a5537c5d44cb3696aa8cc35054, type: 2}
+  - {fileID: 11400000, guid: ded6f4bad59fbbe47b61909720b9b76e, type: 2}
+  - {fileID: 11400000, guid: f58e67da8dd6cda48be852cd5a6d5225, type: 2}
 --- !u!1 &181676384
 GameObject:
   m_ObjectHideFlags: 0

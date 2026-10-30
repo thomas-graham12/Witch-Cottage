@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6065eb4491e8a144fa5df4e8c600335a, type: 3}
   m_Name: Poison
   m_EditorClassIdentifier: 
-  potionName: 
+  potionName: Poison Potion
   potionSprite: {fileID: 0}
   potionType: 2
-  ingredientOne: 2
+  ingredientOne: 4
   ingredientTwo: 3

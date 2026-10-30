@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6065eb4491e8a144fa5df4e8c600335a, type: 3}
   m_Name: Love
   m_EditorClassIdentifier: 
-  potionName: 
+  potionName: Love Potion
   potionSprite: {fileID: 0}
   potionType: 0
   ingredientOne: 2
-  ingredientTwo: 1
+  ingredientTwo: 4

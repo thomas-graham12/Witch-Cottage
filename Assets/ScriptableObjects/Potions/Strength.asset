@@ -15,5 +15,5 @@ MonoBehaviour:
   potionName: 
   potionSprite: {fileID: 0}
   potionType: 1
-  ingredientOne: 1
-  ingredientTwo: 2
+  ingredientOne: 3
+  ingredientTwo: 1
