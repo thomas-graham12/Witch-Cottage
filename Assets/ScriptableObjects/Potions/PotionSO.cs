@@ -19,4 +19,24 @@ public class PotionSO : ScriptableObject
 
     public IngredientType ingredientOne;
     public IngredientType ingredientTwo;
+
+    public void StatePotionName()
+    {
+        if (potionType == PotionType.Health)
+        {
+            Debug.Log("Health pot created");
+        }
+        else if (potionType == PotionType.Love)
+        {
+            Debug.Log("Love pot created");
+        }
+        else if (potionType == PotionType.Poison)
+        {
+            Debug.Log("Poison pot created");
+        }
+        else if (potionType == PotionType.Strength)
+        {
+            Debug.Log("Strength pot created");
+        }
+    }
 }

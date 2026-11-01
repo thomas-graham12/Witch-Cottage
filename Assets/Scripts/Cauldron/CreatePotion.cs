@@ -11,6 +11,7 @@ namespace Cauldron
         public IngredientType ingredientTwo;
         [SerializeField] private List<PotionSO> potionList;
         private List<Dictionary<IngredientType, IngredientType>> _potionRecipes;
+        public int count = 0;
 
         private void Start()
         {
@@ -26,19 +27,18 @@ namespace Cauldron
                 _potionRecipes.Add(recipe);
             }
 
-            for (int i = 0; i < _potionRecipes.Count; i++)
-            {
-                var first = _potionRecipes[i].First();
-                
-                Debug.Log($"First: {first.Key}, {first.Value}");
-            }
+            // for (int i = 0; i < _potionRecipes.Count; i++)
+            // {
+            //     var first = _potionRecipes[i].First();
+            //     
+            //     Debug.Log($"First: {first.Key}, {first.Value}");
+            // }
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.transform.TryGetComponent(out IngredientPrefabStats stats))
             {
-                Debug.Log("Tapped");
                 if (ingredientOne == IngredientType.None)
                 {
                     ingredientOne = stats.ingredientObject.ingredientType;
@@ -54,8 +54,31 @@ namespace Cauldron
                 Debug.Log(ingredientOne);
                 Debug.Log(ingredientTwo);
 
+                DispensePotion();
+                
                 ingredientOne = IngredientType.None;
                 ingredientTwo = IngredientType.None;
+            }
+        }
+
+        private void DispensePotion()
+        {
+            bool bFoundPotionRecipe = false;
+            for (int i = 0; i < potionList.Count; i++)
+            {
+                if ((ingredientOne == potionList[i].ingredientOne && ingredientTwo == potionList[i].ingredientTwo) 
+                    || (ingredientOne == potionList[i].ingredientTwo && ingredientTwo == potionList[i].ingredientOne))
+                {
+                    bFoundPotionRecipe = true;
+                    potionList[i].StatePotionName();
+                    Debug.Log("Yay!");
+                    count++;
+                }
+            }
+
+            if (!bFoundPotionRecipe)
+            {
+                Debug.Log("Recipe was not found");
             }
         }
     }
