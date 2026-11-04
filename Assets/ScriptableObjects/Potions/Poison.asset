@@ -15,5 +15,4 @@ MonoBehaviour:
   potionName: Poison Potion
   potionSprite: {fileID: 0}
   potionType: 2
-  ingredientOne: 4
-  ingredientTwo: 3
+  recipe: 0400000001000000

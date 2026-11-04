@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6065eb4491e8a144fa5df4e8c600335a, type: 3}
   m_Name: Strength
   m_EditorClassIdentifier: 
-  potionName: 
+  potionName: Strength Potion
   potionSprite: {fileID: 0}
   potionType: 1
-  ingredientOne: 3
-  ingredientTwo: 1
+  recipe: 0200000003000000

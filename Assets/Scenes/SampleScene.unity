@@ -267,11 +267,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientOne: 0
   ingredientTwo: 0
+  ingredientList: 
   potionList:
-  - {fileID: 11400000, guid: 11d2b839a48b69c4c8cd21fa5e988035, type: 2}
-  - {fileID: 11400000, guid: dff585a5537c5d44cb3696aa8cc35054, type: 2}
-  - {fileID: 11400000, guid: ded6f4bad59fbbe47b61909720b9b76e, type: 2}
   - {fileID: 11400000, guid: f58e67da8dd6cda48be852cd5a6d5225, type: 2}
+  - {fileID: 11400000, guid: ded6f4bad59fbbe47b61909720b9b76e, type: 2}
+  - {fileID: 11400000, guid: dff585a5537c5d44cb3696aa8cc35054, type: 2}
+  - {fileID: 11400000, guid: 11d2b839a48b69c4c8cd21fa5e988035, type: 2}
 --- !u!1 &181676384
 GameObject:
   m_ObjectHideFlags: 0
@@ -848,6 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientObject: {fileID: 11400000, guid: dc639a95a4ccca343b5f89aa00cabd0b, type: 2}
   baseInregientPrefab: {fileID: 7822778021214961157, guid: eda6a45a25ad2164fae091fa05e50439, type: 3}
+  createPotion: {fileID: 88924343}
 --- !u!1 &1127700294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientObject: {fileID: 11400000, guid: 4c0681c1d3d26e84e8158fe1f9ecd17b, type: 2}
   baseInregientPrefab: {fileID: 7822778021214961157, guid: eda6a45a25ad2164fae091fa05e50439, type: 3}
+  createPotion: {fileID: 88924343}
 --- !u!1 &1604182557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,6 +1387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientObject: {fileID: 11400000, guid: 497af7adb9e1dfa49879624d9b7796cd, type: 2}
   baseInregientPrefab: {fileID: 7822778021214961157, guid: eda6a45a25ad2164fae091fa05e50439, type: 3}
+  createPotion: {fileID: 88924343}
 --- !u!1 &1665574412
 GameObject:
   m_ObjectHideFlags: 0
@@ -1734,6 +1738,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientObject: {fileID: 11400000, guid: 48dbeed955fcdaa49a0f24ea18e5bcc1, type: 2}
   baseInregientPrefab: {fileID: 7822778021214961157, guid: eda6a45a25ad2164fae091fa05e50439, type: 3}
+  createPotion: {fileID: 88924343}
 --- !u!1 &1950117021
 GameObject:
   m_ObjectHideFlags: 0

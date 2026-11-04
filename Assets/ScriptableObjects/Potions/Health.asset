@@ -15,5 +15,4 @@ MonoBehaviour:
   potionName: Health Potion
   potionSprite: {fileID: 0}
   potionType: 3
-  ingredientOne: 2
-  ingredientTwo: 1
+  recipe: 0100000002000000

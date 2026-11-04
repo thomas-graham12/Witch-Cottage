@@ -15,5 +15,4 @@ MonoBehaviour:
   potionName: Love Potion
   potionSprite: {fileID: 0}
   potionType: 0
-  ingredientOne: 2
-  ingredientTwo: 4
+  recipe: 0300000004000000

@@ -17,8 +17,7 @@ public class PotionSO : ScriptableObject
     public Sprite potionSprite;
     public PotionType potionType;
 
-    public IngredientType ingredientOne;
-    public IngredientType ingredientTwo;
+    public List<IngredientType> recipe;
 
     public void StatePotionName()
     {

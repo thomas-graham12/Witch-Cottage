@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cauldron;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class SpawnIngredient : MonoBehaviour
 {
     [SerializeField] private IngredientsSO ingredientObject;
     [SerializeField] private GameObject baseInregientPrefab;
+    [SerializeField] CreatePotion createPotion;
 
     private Button _button;
     
@@ -20,7 +22,10 @@ public class SpawnIngredient : MonoBehaviour
     // Update is called once per frame
     public void TaskOnClick()
     {
-        baseInregientPrefab.GetComponent<IngredientPrefabStats>().ingredientObject = ingredientObject;
-        Instantiate(baseInregientPrefab);
+        if (createPotion.ingredientList.Count < 3)
+        {
+            baseInregientPrefab.GetComponent<IngredientPrefabStats>().ingredientObject = ingredientObject;
+            Instantiate(baseInregientPrefab);
+        }
     }
 }
