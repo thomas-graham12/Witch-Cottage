@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class OrderManager : MonoBehaviour
@@ -11,6 +12,11 @@ public class OrderManager : MonoBehaviour
 
     [SerializeField] private List<PotionType> potionType;
 
+    [SerializeField] private List<string> customerNames;
+
+    [SerializeField] private TextMeshProUGUI nameTextBox;
+    [SerializeField] private TextMeshProUGUI orderTextBox;
+
     private int _randomPotion;
     
     // Start is called before the first frame update
@@ -21,18 +27,22 @@ public class OrderManager : MonoBehaviour
         if (potionType[_randomPotion] == PotionType.Love)
         {
             ChooseLine(orderTextLove);
+            RandomName();
         }
         else if (potionType[_randomPotion] == PotionType.Strength)
         {
             ChooseLine(orderTextStrength);
+            RandomName();
         }
         else if (potionType[_randomPotion] == PotionType.Health)
         {
             ChooseLine(orderTextHealth);
+            RandomName();
         }
         else if (potionType[_randomPotion] == PotionType.Poison)
         {
             ChooseLine(orderTextPoison);
+            RandomName();
         }
         else
         {
@@ -44,6 +54,14 @@ public class OrderManager : MonoBehaviour
     {
         int randomLine;
         randomLine = Random.Range(0, orderScriptableObject.Count);
-        Debug.Log(orderScriptableObject[randomLine].orderText);
+        //Debug.Log(orderScriptableObject[randomLine].orderText);
+        orderTextBox.text = orderScriptableObject[randomLine].orderText;
+    }
+
+    void RandomName()
+    {
+        int index;
+        index = Random.Range(0, customerNames.Count);
+        nameTextBox.text = customerNames[index];
     }
 }
