@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9a9866ef4d33b04a8543e79ceefd523, type: 3}
   m_Name: HealthPotText4
   m_EditorClassIdentifier: 
-  text: 
+  orderText: Health text 4
