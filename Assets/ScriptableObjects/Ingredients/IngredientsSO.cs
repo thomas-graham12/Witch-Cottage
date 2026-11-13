@@ -17,4 +17,5 @@ public class IngredientsSO : ScriptableObject
     public string ingredientName;
     public Sprite ingredientSprite;
     public IngredientType ingredientType;
+    public int amount;
 }

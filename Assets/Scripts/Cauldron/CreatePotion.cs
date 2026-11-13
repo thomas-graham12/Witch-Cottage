@@ -11,7 +11,7 @@ namespace Cauldron
         public IngredientType ingredientTwo;
         public List<IngredientType> ingredientList;
         [SerializeField] private List<PotionSO> potionList;
-
+        
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.transform.TryGetComponent(out IngredientPrefabStats stats))
@@ -35,7 +35,7 @@ namespace Cauldron
                 {
                     if (ingredientList.OrderBy(x => x).SequenceEqual(includedIngredients.OrderBy(x => x)))
                     {
-                        Debug.Log(potionList[i]); 
+                        Debug.Log(potionList[i]);
                     }
                 }
                 else

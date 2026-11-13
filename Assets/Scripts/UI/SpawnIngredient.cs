@@ -10,22 +10,19 @@ public class SpawnIngredient : MonoBehaviour
     [SerializeField] private GameObject baseInregientPrefab;
     [SerializeField] CreatePotion createPotion;
 
-    private Button _button;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        // _button = GetComponent<Button>();
-        // _button.onClick.AddListener(TaskOnClick);
-    }
+    [SerializeField] private InventoryManager inventoryManager;
 
     // Update is called once per frame
     public void TaskOnClick()
     {
         if (createPotion.ingredientList.Count < 3)
         {
-            baseInregientPrefab.GetComponent<IngredientPrefabStats>().ingredientObject = ingredientObject;
-            Instantiate(baseInregientPrefab);
+            if (ingredientObject.amount > 0)
+            {
+                inventoryManager.DecreaseIngredient(ingredientObject);
+                baseInregientPrefab.GetComponent<IngredientPrefabStats>().ingredientObject = ingredientObject;
+                Instantiate(baseInregientPrefab);
+            }
         }
     }
 }

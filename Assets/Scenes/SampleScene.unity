@@ -933,6 +933,7 @@ MonoBehaviour:
   ingredientObject: {fileID: 11400000, guid: dc639a95a4ccca343b5f89aa00cabd0b, type: 2}
   baseInregientPrefab: {fileID: 7822778021214961157, guid: eda6a45a25ad2164fae091fa05e50439, type: 3}
   createPotion: {fileID: 88924343}
+  inventoryManager: {fileID: 1252313309}
 --- !u!1 &1127700294
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1068,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127700294}
   m_CullTransparentMesh: 1
+--- !u!1 &1252313307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1252313308}
+  - component: {fileID: 1252313309}
+  m_Layer: 0
+  m_Name: InventoryManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1252313308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252313307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 740.09045, y: 576.93164, z: 7.3665986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1252313309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252313307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad4d81e5ecc5fdd4f8203231b4449f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1397922063
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,6 +1364,7 @@ MonoBehaviour:
   ingredientObject: {fileID: 11400000, guid: 4c0681c1d3d26e84e8158fe1f9ecd17b, type: 2}
   baseInregientPrefab: {fileID: 7822778021214961157, guid: eda6a45a25ad2164fae091fa05e50439, type: 3}
   createPotion: {fileID: 88924343}
+  inventoryManager: {fileID: 1252313309}
 --- !u!1 &1558555380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,6 +1795,7 @@ MonoBehaviour:
   ingredientObject: {fileID: 11400000, guid: 497af7adb9e1dfa49879624d9b7796cd, type: 2}
   baseInregientPrefab: {fileID: 7822778021214961157, guid: eda6a45a25ad2164fae091fa05e50439, type: 3}
   createPotion: {fileID: 88924343}
+  inventoryManager: {fileID: 1252313309}
 --- !u!1 &1665574412
 GameObject:
   m_ObjectHideFlags: 0
@@ -2445,6 +2492,7 @@ MonoBehaviour:
   ingredientObject: {fileID: 11400000, guid: 48dbeed955fcdaa49a0f24ea18e5bcc1, type: 2}
   baseInregientPrefab: {fileID: 7822778021214961157, guid: eda6a45a25ad2164fae091fa05e50439, type: 3}
   createPotion: {fileID: 88924343}
+  inventoryManager: {fileID: 1252313309}
 --- !u!1 &1950117021
 GameObject:
   m_ObjectHideFlags: 0
@@ -2589,3 +2637,4 @@ SceneRoots:
   - {fileID: 1906599705}
   - {fileID: 88924341}
   - {fileID: 166925260}
+  - {fileID: 1252313308}
