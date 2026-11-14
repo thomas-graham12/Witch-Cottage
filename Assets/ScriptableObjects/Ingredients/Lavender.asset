@@ -15,3 +15,4 @@ MonoBehaviour:
   ingredientName: Lavender
   ingredientSprite: {fileID: 21300000, guid: 1c7a5f9801363274ebe05805a64833d4, type: 3}
   ingredientType: 3
+  amount: 995

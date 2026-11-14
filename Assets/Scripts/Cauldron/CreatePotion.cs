@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Cauldron
 {
@@ -11,6 +12,8 @@ namespace Cauldron
         public IngredientType ingredientTwo;
         public List<IngredientType> ingredientList;
         [SerializeField] private List<PotionSO> potionList;
+        [SerializeField] private PotionSO currentPotion;
+        [SerializeField] private OrderManager orderManager;
         
         private void OnTriggerEnter2D(Collider2D other)
         {
@@ -22,6 +25,8 @@ namespace Cauldron
 
         public void BrewPotion()
         {
+            bool bFoundPotion = false;
+            
             List<IngredientType> includedIngredients = new List<IngredientType>();
             for (int i = 0; i < potionList.Count; i++)
             {
@@ -35,15 +40,30 @@ namespace Cauldron
                 {
                     if (ingredientList.OrderBy(x => x).SequenceEqual(includedIngredients.OrderBy(x => x)))
                     {
-                        Debug.Log(potionList[i]);
+                        currentPotion = potionList[i];
+                        bFoundPotion = true;
                     }
                 }
                 else
                 {
-                    Debug.Log("No matching potions");
+                    //Debug.Log("No matching potions");
+                    
                 }
             }
+
+            if (bFoundPotion)
+            {
+                orderManager.IsPotionCorrect(currentPotion);
+            }
+            else
+            {
+                orderManager.RandomPotion();
+            }
+            
+            
             ingredientList.Clear();
+            currentPotion = null;
+            bFoundPotion = false;
         }
     }
 }

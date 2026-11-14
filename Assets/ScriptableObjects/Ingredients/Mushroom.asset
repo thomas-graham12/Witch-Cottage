@@ -15,3 +15,4 @@ MonoBehaviour:
   ingredientName: Mushroom
   ingredientSprite: {fileID: 21300000, guid: 32327b99c6851c040bb87fa5fc2ca3d2, type: 3}
   ingredientType: 2
+  amount: 993
