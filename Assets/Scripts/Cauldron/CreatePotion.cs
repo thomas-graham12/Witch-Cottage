@@ -43,6 +43,10 @@ namespace Cauldron
                         currentPotion = potionList[i];
                         bFoundPotion = true;
                     }
+                    else
+                    {
+                        bFoundPotion = false;
+                    }
                 }
                 else
                 {
@@ -53,11 +57,11 @@ namespace Cauldron
 
             if (bFoundPotion)
             {
-                orderManager.IsPotionCorrect(currentPotion);
+                StartCoroutine(orderManager.IIsPotionCorrect(currentPotion));
             }
             else
             {
-                orderManager.RandomPotion();
+                StartCoroutine(orderManager.IIsPotionCorrect(currentPotion));
             }
             
             

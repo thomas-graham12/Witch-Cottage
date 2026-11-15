@@ -18,6 +18,7 @@ public class OrderManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nameTextBox;
     [SerializeField] private TextMeshProUGUI orderTextBox;
     [SerializeField] private TextMeshProUGUI requiredPotionTextBox;
+    [SerializeField] private TextMeshProUGUI isCorrectTextBox;
 
     private int _randomPotion;
     
@@ -82,13 +83,19 @@ public class OrderManager : MonoBehaviour
     {
         if (potionSO.potionType == currentPotion)
         {
-            Debug.Log("Correct Potion!");
-            RandomPotion();
+            isCorrectTextBox.text = "Thank you for the potion!";
         }
         else
         {
-            Debug.Log("Incorrect potion!");
-            RandomPotion();
+            isCorrectTextBox.text = "This isn't what I asked for!";
         }
+    }
+
+    public IEnumerator IIsPotionCorrect(PotionSO potionSO)
+    {
+        IsPotionCorrect(potionSO);
+        yield return new WaitForSeconds(3.0f);
+        isCorrectTextBox.text = "";
+        RandomPotion();
     }
 }
