@@ -26,6 +26,7 @@ namespace Cauldron
         public void BrewPotion()
         {
             bool bFoundPotion = false;
+            currentPotion = null;
             
             List<IngredientType> includedIngredients = new List<IngredientType>();
             for (int i = 0; i < potionList.Count; i++)
@@ -42,16 +43,8 @@ namespace Cauldron
                     {
                         currentPotion = potionList[i];
                         bFoundPotion = true;
+                        break;
                     }
-                    else
-                    {
-                        bFoundPotion = false;
-                    }
-                }
-                else
-                {
-                    //Debug.Log("No matching potions");
-                    
                 }
             }
 
@@ -61,13 +54,11 @@ namespace Cauldron
             }
             else
             {
+                currentPotion = potionList[potionList.Count - 1];
                 StartCoroutine(orderManager.IIsPotionCorrect(currentPotion));
             }
             
-            
             ingredientList.Clear();
-            currentPotion = null;
-            bFoundPotion = false;
         }
     }
 }

@@ -7,7 +7,8 @@ public enum PotionType
     Love,
     Strength,
     Poison,
-    Health
+    Health,
+    Nothing
 }
 
 [CreateAssetMenu(fileName = "Potion", menuName = "Inventory/Potion")]

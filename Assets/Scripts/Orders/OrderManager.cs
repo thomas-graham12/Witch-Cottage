@@ -85,6 +85,10 @@ public class OrderManager : MonoBehaviour
         {
             isCorrectTextBox.text = "Thank you for the potion!";
         }
+        else if (potionSO.potionType != currentPotion)
+        {
+            isCorrectTextBox.text = "This isn't what I asked for!";
+        }
         else
         {
             isCorrectTextBox.text = "This isn't what I asked for!";
