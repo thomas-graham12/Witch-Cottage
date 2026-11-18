@@ -12,10 +12,4 @@ public class PotionPrefabStats : MonoBehaviour
         name = potionObject.potionName;
         GetComponentInChildren<SpriteRenderer>().sprite = potionObject.potionSprite;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

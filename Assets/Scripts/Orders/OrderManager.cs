@@ -19,6 +19,12 @@ public class OrderManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI orderTextBox;
     [SerializeField] private TextMeshProUGUI requiredPotionTextBox;
     [SerializeField] private TextMeshProUGUI isCorrectTextBox;
+    [SerializeField] private TextMeshProUGUI moneyTextBox;
+
+    [SerializeField] private PlayerStatsSO playerStats;
+    
+    // Sounds
+    [SerializeField] private AudioSource moneySound;
 
     private int _randomPotion;
     
@@ -26,6 +32,7 @@ public class OrderManager : MonoBehaviour
     void Start()
     {
         RandomPotion();
+        moneyTextBox.text = playerStats.moneyAmount.ToString();
     }
 
     void ChooseLine(List<OrderSO> orderScriptableObject)
@@ -83,7 +90,11 @@ public class OrderManager : MonoBehaviour
     {
         if (potionSO.potionType == currentPotion)
         {
+            int randomMoneyAmount = Random.Range(15, 28);
             isCorrectTextBox.text = "Thank you for the potion!";
+            playerStats.moneyAmount += randomMoneyAmount;
+            moneyTextBox.text = playerStats.moneyAmount.ToString();
+            moneySound.Play();
         }
         else if (potionSO.potionType != currentPotion)
         {
