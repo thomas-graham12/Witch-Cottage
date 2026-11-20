@@ -88,21 +88,21 @@ public class OrderManager : MonoBehaviour
 
     public void IsPotionCorrect(PotionSO potionSO)
     {
+        bool bPotionCorrect = false;
         if (potionSO.potionType == currentPotion)
         {
-            int randomMoneyAmount = Random.Range(15, 28);
-            isCorrectTextBox.text = "Thank you for the potion!";
-            playerStats.moneyAmount += randomMoneyAmount;
-            moneyTextBox.text = playerStats.moneyAmount.ToString();
-            moneySound.Play();
+            bPotionCorrect = true;
+            MoneyGain(bPotionCorrect);
         }
         else if (potionSO.potionType != currentPotion)
         {
-            isCorrectTextBox.text = "This isn't what I asked for!";
+            bPotionCorrect = false;
+            MoneyGain(bPotionCorrect);
         }
         else
         {
-            isCorrectTextBox.text = "This isn't what I asked for!";
+            bPotionCorrect = false;
+            MoneyGain(bPotionCorrect);
         }
     }
 
@@ -112,5 +112,26 @@ public class OrderManager : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         isCorrectTextBox.text = "";
         RandomPotion();
+    }
+
+    private void MoneyGain(bool bPotionCorrect)
+    {
+        int randomMoneyAmount = Random.Range(15, 28);
+
+        playerStats.moneyAmount = Mathf.Clamp(playerStats.moneyAmount, 0, 999999);
+        if (bPotionCorrect)
+        {
+            isCorrectTextBox.text = "Thank you for the potion!";
+            playerStats.moneyAmount += randomMoneyAmount;
+            moneyTextBox.text = playerStats.moneyAmount.ToString();
+            moneySound.Play();
+        }
+        else
+        {
+            isCorrectTextBox.text = "This isn't what I asked for!";
+            playerStats.moneyAmount -= randomMoneyAmount;
+            moneyTextBox.text = playerStats.moneyAmount.ToString();
+        }
+
     }
 }
